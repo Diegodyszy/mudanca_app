@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Administração</title>
+  <link rel="stylesheet" href="paineladm.css">
+  <script src="paineladm.js" defer></script>
+</head>
+<body>
+  <header>
+    <img class="logo" src="/frontend/Login/imgs/logo.png">
+  </header>
+
+  <h1>Painel de Administração</h1>
+
+  <div class="container-admin">
+    <table id="tabelaUsuarios">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Endereço</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela">
+        <!-- Exemplo de como os dados aparecerão -->
+        <tr>
+          <td>João da Silva</td>
+          <td>(11) 99999-9999</td>
+          <td>Rua das Mudanças, 123</td>
+          <td>joao@exemplo.com</td>
+          <td>
+            <button class="btn-excluir">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
