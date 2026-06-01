@@ -22,7 +22,7 @@ form.addEventListener("submit", function (event) {
     })
     .then(data => {
         console.log("Sucesso:", data);
-        alert("Usuário cadastrado com sucesso!");
+        alert("Suas informações foram salvas com sucesso, assim que possivel te retornaremos ");
     })
     .catch(err => {
         console.error("Erro na conexão:", err);
