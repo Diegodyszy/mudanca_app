@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.mudanca.backend.dao.interface_cadastros;
+import com.mudanca.backend.model.Role;
 import com.mudanca.backend.model.cadastros;
 import jakarta.transaction.Transactional;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -56,7 +56,22 @@ public class cadastros_controller {
       return ResponseEntity.ok(user.get());
     }
 
-      
+     @PutMapping("/role/{id}")
+    @Transactional
+    public ResponseEntity<?> atualizarRole(@PathVariable Long id, @RequestParam Role role){
+        Optional<cadastros> user = dao.findById(id);
+
+        if (user.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+
+        user.get().setRole(role);
+        dao.save(user.get());
+        return ResponseEntity.ok("Role atualizado com sucesso");
     }
+}
+
+      
+    
 
  
