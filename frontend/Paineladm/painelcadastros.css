@@ -43,18 +43,36 @@ th {
   font-weight: bold;
 }
 
-.btn-editar, .btn-excluir {
+.btn-editar, .btn-excluir, .btn-role {
   padding: 8px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease;
+  margin: 2px;
+  font-size: 13px;
 }
 
 .btn-editar { background-color: #007bff; color: white; margin-right: 5px; }
 .btn-excluir { background-color: #dc3545; color: white; }
 
-.btn-editar:hover, .btn-excluir:hover {
-  opacity: 0.8;
+.btn-promover {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-rebaixar {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-editar:hover, .btn-excluir:hover, .btn-promover:hover, .btn-rebaixar:hover {
+  filter: brightness(90%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.btn-editar:active, .btn-excluir:active, .btn-promover:active, .btn-rebaixar:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }

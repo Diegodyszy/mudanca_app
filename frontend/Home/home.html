@@ -37,10 +37,45 @@
             <i class="fa-solid fa-arrow-right"></i>
         </button>
       </a>
+
+            <div id="painel-admin" style="display:none;">
+        <a class="para_cadastro" href="/frontend/Paineladm/painelcadastros.html">
+          <button class="btn-enviar">
+              <div class="svg-wrapper">
+                  <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="texto-btn">
+                  <span>Painel de Cadastros</span>
+                  <small>Gerenciar usuários</small>
+              </div>
+              <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+
+        <a class="para_cadastro" href="/frontend/Paineladm/painelrelacoes.html">
+          <button class="btn-enviar">
+              <div class="svg-wrapper">
+                  <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+              <div class="texto-btn">
+                  <span>Painel de Relações</span>
+                  <small>Gerenciar relações</small>
+              </div>
+              <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Mudança Fácil. Todos os direitos reservados.</p>
     </footer>
+
+        <script>
+        const role = sessionStorage.getItem("role");
+        if (role === "ADMIN") {
+            document.getElementById("painel-admin").style.display = "block";
+        }
+    </script>
 </body>
 </html>
