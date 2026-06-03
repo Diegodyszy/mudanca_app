@@ -10,8 +10,13 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
         body: JSON.stringify({ email: email, senha: senha })
     })
     .then(response => {
-        if (response.ok) {
+    if (response.ok) {
+        response.json().then(usuario => {
+            sessionStorage.setItem("role", usuario.role);
+            sessionStorage.setItem("nome", usuario.nome);
             window.location.href = "../Home/home.html";
+        });
+
         } else {
             // Usuário não existe → mostra mensagem
             alert("Usuário não existe!");

@@ -1,3 +1,10 @@
+const role = sessionStorage.getItem("role");
+
+if (role !== "ADMIN") {
+    alert("Acesso negado! Apenas administradores podem acessar esta página.");
+    window.location.href = "../Login/login.html"; // ajuste o caminho
+}
+
 async function listaUsuarios(){
   try{
     const resposta = await fetch('http://localhost:8080/cadastro');
@@ -16,6 +23,10 @@ async function listaUsuarios(){
     }
 
     users.forEach(usuario =>{
+      const novoRole = usuario.role === 'ADMIN' ? 'USER' : 'ADMIN';
+      const labelBotao = usuario.role === 'ADMIN' ? 'Rebaixar para USER' : 'Promover para ADMIN';
+      const classeExtra = usuario.role === 'ADMIN' ? 'btn-rebaixar' : 'btn-promover';
+
       corpoTabela.innerHTML += `
         <tr>
           <td>${usuario.email}</td>
@@ -24,8 +35,9 @@ async function listaUsuarios(){
           <td>${usuario.role}</td>
           <td>
             <button class="btn-excluir" onclick="deletarUsuario(${usuario.id})">Excluir</button>
-            <button class="btn-role" onclick="alterarRole(${usuario.id})">Alterar Role</button>
+            <button class="btn-role ${classeExtra}" onclick="alterarRole(${usuario.id}, '${novoRole}')">${labelBotao}</button>
           </td>
+        </tr>
 
       `;
     })
@@ -64,6 +76,3 @@ window.alterarRole = async function(id, novoRole) {
 }
 
 listaUsuarios();
-
-
-

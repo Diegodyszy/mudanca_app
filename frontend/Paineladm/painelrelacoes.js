@@ -1,3 +1,10 @@
+const role = sessionStorage.getItem("role");
+
+if (role !== "ADMIN") {
+    alert("Acesso negado! Apenas administradores podem acessar esta página.");
+    window.location.href = "../Login/login.html"; // ajuste o caminho
+}
+
 async function listaUsuarios(){
   try{
     const resposta = await fetch('http://localhost:8080/user');
