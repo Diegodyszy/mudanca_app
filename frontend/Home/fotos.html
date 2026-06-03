@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotos - Mudança Fácil</title>
+    <link rel="stylesheet" href="../paginicial/paginicial.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="/frontend/Login/imgs/logo.png" alt="Logo Mudança Fácil" class="logo">
-        <nav class="nav-header">
-            <a href="home.html" class="nav-link">Página Inicial</a>
-        </nav>
+    <header class="main-header">
+        <div class="header-container">
+            <img src="../Login/imgs/logo.png" alt="Logo Mudança Fácil" class="logo">
+            <nav class="nav-menu">         
+                <a href="../paginicial/paginicial.html">Início</a>
+                <div class="auth-buttons">
+                    <a href="../entrar_cadastrar/login.html" class="btn-login">Entrar</a>
+                    <a href="../entrar_cadastrar/cadastrar.html" class="btn-signup">Cadastrar</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <h1>Galeria de Fotos</h1>
-
-    <main class="container-home">
+    <main class="container-home" style="margin-top: 100px;">
+      <h1>Galeria de Fotos</h1>
       <h2>Nossos Trabalhos</h2>
+      <p>Confira alguns dos nossos projetos realizados com segurança e profissionalismo.</p>
       <div class="galeria-fotos">
         <div class="foto-item">
-          <img src="/frontend/Home/imgs/Captura de tela 2026-06-01 135301.png" alt="Trabalho de Mudança 1">
+          <img src="imgs/Captura de tela 2026-06-01 135301.png" alt="Trabalho de Mudança 1">
         </div>
         <div class="foto-item">
-          <img src="/frontend/Home/imgs/Captura de tela 2026-06-01 135400.png" alt="Trabalho de Mudança 2">
+          <img src="imgs/Captura de tela 2026-06-01 135400.png" alt="Trabalho de Mudança 2">
         </div>
         <div class="foto-item">
-          <img src="/frontend/Home/imgs/Captura de tela 2026-06-01 135500.png" alt="Trabalho de Mudança 3">
+          <img src="imgs/Captura de tela 2026-06-01 135500.png" alt="Trabalho de Mudança 3">
         </div>
         <div class="foto-item">
-          <img src="/frontend/Home/imgs/Captura de tela 2026-06-01 135547.png" alt="Trabalho de Mudança 4">
+          <img src="imgs/Captura de tela 2026-06-01 135547.png" alt="Trabalho de Mudança 4">
         </div>
       </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Mudança Facil. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Mudança Fácil. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
