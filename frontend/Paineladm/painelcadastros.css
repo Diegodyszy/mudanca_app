@@ -22,7 +22,7 @@ h1 {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  margin: 20px auto;
   overflow-x: auto;
 }
 
