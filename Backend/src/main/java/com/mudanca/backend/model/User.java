@@ -33,9 +33,6 @@ public class User {
       return id;
     }
 
-    @Column(name = "email", length = 255, nullable = false)
-    private String email;
-
     public void setId(Long id) {
       this.id = id;
     }
@@ -66,11 +63,4 @@ public class User {
       this.para_endereco = endereco;
     }
 
-    public String getEmail() {
-      return email;
-    }
-
-    public void setEmail(String email) {
-      this.email = email;
-    }
 }
