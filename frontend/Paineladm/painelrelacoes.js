@@ -27,8 +27,8 @@ async function listaUsuarios(){
         <tr>
           <td>${usuario.nome}</td>
           <td>${usuario.telefone}</td>
-          <td>${usuario.endereco}</td>
-          <td>${usuario.email}</td>
+          <td>${usuario.de_endereco}</td>
+          <td>${usuario.para_endereco}</td>
           <td>
             <button class="btn-excluir" onclick="deletarUsuario(${usuario.id})">Excluir</button>
           </td>

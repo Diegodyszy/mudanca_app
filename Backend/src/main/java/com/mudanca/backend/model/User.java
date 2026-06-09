@@ -23,8 +23,12 @@ public class User {
     @Column(name = "telefone", length = 15, nullable = false)
     private String telefone;
 
-    @Column(name = "endereco", length = 255, nullable = false)
-    private String endereco;
+    @Column(name = "De", length = 255, nullable = false)
+    private String de_endereco;
+
+    @Column(name = "Para", length = 255, nullable = false)
+    private String para_endereco;
+
     public Long getId() {
       return id;
     }
@@ -47,11 +51,19 @@ public class User {
     public void setTelefone(String telefone) {
       this.telefone = telefone;
     }
-    public String getEndereco() {
-      return endereco;
+    public String getde_endereco() {
+      return de_endereco;
     }
-    public void setEndereco(String endereco) {
-      this.endereco = endereco;
+    public void setde_endereco(String endereco) {
+      this.de_endereco = endereco;
+    }
+
+    public String getpara_endereco() {
+      return para_endereco;
+    }
+
+    public void setpara_endereco(String endereco) {
+      this.para_endereco = endereco;
     }
 
     public String getEmail() {
