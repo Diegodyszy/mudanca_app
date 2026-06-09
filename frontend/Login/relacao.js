@@ -12,8 +12,8 @@ form.addEventListener("submit", function (event) {
         body: JSON.stringify({
             nome: nome.value,
             telefone: telefone.value,
-            endereco: endereco.value,
-            para_endereco: para_endereco.value,
+            deEndereco: endereco.value,
+            paraEndereco: para_endereco.value,
             
         })
     })
