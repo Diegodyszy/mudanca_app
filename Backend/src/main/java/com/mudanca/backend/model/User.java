@@ -1,5 +1,7 @@
 package com.mudanca.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,9 +25,11 @@ public class User {
     @Column(name = "telefone", length = 15, nullable = false)
     private String telefone;
 
+    @JsonProperty("de_endereco")
     @Column(name = "De", length = 255, nullable = false)
     private String de_endereco;
 
+      @JsonProperty("para_endereco")
     @Column(name = "Para", length = 255, nullable = false)
     private String para_endereco;
 
@@ -48,19 +52,18 @@ public class User {
     public void setTelefone(String telefone) {
       this.telefone = telefone;
     }
-    public String getde_endereco() {
+    public String getDeEndereco() {
       return de_endereco;
     }
-    public void setde_endereco(String endereco) {
+    public void setDeEndereco(String endereco) {
       this.de_endereco = endereco;
     }
 
-    public String getpara_endereco() {
+    public String getParaEndereco() {
       return para_endereco;
-    }
-
-    public void setpara_endereco(String endereco) {
+    }   
+    public void setParaEndereco(String endereco) {
       this.para_endereco = endereco;
     }
 
-}
+ }
