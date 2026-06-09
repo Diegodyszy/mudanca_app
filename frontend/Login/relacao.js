@@ -13,7 +13,8 @@ form.addEventListener("submit", function (event) {
             nome: nome.value,
             telefone: telefone.value,
             endereco: endereco.value,
-            email: email.value,
+            para_endereco: para_endereco.value,
+            
         })
     })
     .then(res => {
