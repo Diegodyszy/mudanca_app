@@ -23,11 +23,12 @@ h1 { margin-bottom: 4%; text-align: center; }
 
 label { display: block; margin-bottom: 5px; font-weight: bold; }
 
-input[type="text"], input[type="tel"], input[type="email"], input[type="file"] {
+input[type="text"], input[type="tel"], input[type="email"], input[type="file"], textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: inherit;
 }
 
 button { 

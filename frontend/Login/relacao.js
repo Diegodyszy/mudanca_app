@@ -14,6 +14,8 @@ form.addEventListener("submit", function (event) {
             telefone: telefone.value,
             deEndereco: endereco.value,
             paraEndereco: para_endereco.value,
+            relacao: relacao.value,
+            data: data.value
             
         })
     })

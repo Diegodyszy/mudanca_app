@@ -33,6 +33,9 @@ public class User {
     @Column(name = "Para", length = 255, nullable = false)
     private String para_endereco;
 
+    @Column(name = "Relacao", columnDefinition = "TEXT", length = 255, nullable = false)
+    private String relacao;
+
     public Long getId() {
       return id;
     }
@@ -65,5 +68,13 @@ public class User {
     public void setParaEndereco(String endereco) {
       this.para_endereco = endereco;
     }
+
+    public String getRelacao() {
+      return relacao;
+    }
+    public void setRelacao(String relacao) {
+      this.relacao = relacao;
+    }
+
 
  }
