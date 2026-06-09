@@ -2,6 +2,8 @@ package com.mudanca.backend.model;
 
 
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,6 +37,9 @@ public class User {
 
     @Column(name = "Relacao", columnDefinition = "TEXT", length = 255, nullable = false)
     private String relacao;
+
+    @Column(name = "Data", nullable = false)
+    private LocalDate data;
 
     public Long getId() {
       return id;
@@ -74,6 +79,13 @@ public class User {
     }
     public void setRelacao(String relacao) {
       this.relacao = relacao;
+    }
+
+    public LocalDate getData() {
+      return data;
+    }
+    public void setData(LocalDate data) {
+      this.data = data;
     }
 
 
