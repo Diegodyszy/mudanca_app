@@ -35,7 +35,7 @@ public class User {
     @Column(name = "Para", length = 255, nullable = false)
     private String para_endereco;
 
-    @Column(name = "Relacao", columnDefinition = "TEXT", length = 255, nullable = false)
+    @Column(name = "Relacao", length = 5000, nullable = false)
     private String relacao;
 
     @Column(name = "Data", nullable = false)
