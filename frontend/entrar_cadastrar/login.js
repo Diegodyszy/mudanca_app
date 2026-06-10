@@ -12,8 +12,15 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
     .then(response => {
     if (response.ok) {
         response.json().then(usuario => {
-            sessionStorage.setItem("role", usuario.role);
-            sessionStorage.setItem("nome", usuario.nome);
+
+            localStorage.setItem(
+                "usuariologado",
+                JSON.stringify(usuario)
+            );
+
+            console.log("Usuário logado:", usuario);
+
+
             window.location.href = "../Home/home.html";
         });
 

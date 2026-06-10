@@ -1,3 +1,13 @@
+const usuario = JSON.parse(localStorage.getItem("usuariologado"));
+
+if (!usuario) {
+  window.location.href = "../entrar_cadastrar/login.html";
+}
+
+
+
+
+
 const role = sessionStorage.getItem("role");
 
 if (role !== "ADMIN") {
