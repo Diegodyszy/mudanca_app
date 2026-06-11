@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mudança Fácil - Profissionalismo e Segurança</title>
     <link rel="stylesheet" href="paginicial.css">
+    <link rel="stylesheet" href="../Home/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="paginicial.js" defer></script>
 </head>
 <body>
     <header class="main-header">
         <div class="header-container">
             <img src="../Login/imgs/logo.png" alt="Logo Mudança Fácil" class="logo">
-            <nav class="nav-menu">         
-                <div class="auth-buttons">
+            <nav class="nav-menu"> <!-- Tudo dentro do nav-menu para alinhar com a Home -->
+                <a href="/frontend/paginicial/paginicial.html" class="nav-link">Início</a>
+                
+                <div class="auth-buttons" id="auth-buttons">
                     <a href="/frontend/entrar_cadastrar/login.html" class="btn-login">Entrar</a>
                     <a href="/frontend/entrar_cadastrar/cadastrar.html" class="btn-signup">Cadastrar</a>
+                </div>
+
+                <div class="usuario-info" id="usuario-info" style="display:none;">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="nomeUsuario"></span>
+                    <a href="/frontend/Home/home.html" class="btn-minha-area">Minha Área</a>
+                    <button class="btn-logout" onclick="logout()">Sair</button>
                 </div>
             </nav>
         </div>

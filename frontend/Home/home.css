@@ -7,6 +7,109 @@ body {
   min-height: 100vh; /* Garante que o corpo ocupe toda a altura da viewport */
 }
 
+/* Layout do Header Principal */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #007bff;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 80px; /* Aumentado para dar mais destaque */
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Padronizado o espaçamento */
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Estilização Profissional da Info do Usuário no Header */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 15px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.usuario-info i {
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+#nomeUsuario {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Botões de Ação no Header */
+.btn-logout, .btn-login, .btn-signup, .btn-minha-area {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-logout {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1.5px solid #dc3545;
+}
+
+.btn-logout:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-login {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-login:hover {
+  background: white;
+  color: #007bff;
+}
+
+.btn-signup, .btn-minha-area {
+  background-color: #ffc107;
+  color: #333;
+  border: 1px solid #ffc107;
+}
+
+.btn-signup:hover, .btn-minha-area:hover {
+  background-color: #e0a800;
+}
+
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }

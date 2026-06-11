@@ -14,13 +14,13 @@
         <div class="header-container">
             <img src="../Login/imgs/logo.png" alt="Logo Mudança Fácil" class="logo">
             <nav class="nav-menu">         
-                <a href="../paginicial/paginicial.html">Início</a>
+                <a href="../paginicial/paginicial.html" class="nav-link">Início</a>
+                <div class="usuario-info">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="nomeUsuario">Carregando...</span>
+                    <button class="btn-logout" onclick="logout()">Sair</button>
+                </div>
             </nav>
-
-        <div class="usuario-info">
-                <span id="nomeUsuario"></span>
-                <button onclick="logout()">Sair</button>
-            </div>
         </div>
     </header>
 
