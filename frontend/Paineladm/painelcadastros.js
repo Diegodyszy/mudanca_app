@@ -1,18 +1,8 @@
-const usuario = JSON.parse(localStorage.getItem("usuariologado"));
-
-if (!usuario) {
-  window.location.href = "../entrar_cadastrar/login.html";
-}
-
-
-
-
-
 const role = sessionStorage.getItem("role");
 
 if (role !== "ADMIN") {
     alert("Acesso negado! Apenas administradores podem acessar esta página.");
-    window.location.href = "../Login/login.html"; // ajuste o caminho
+    window.location.href = "../paginicial/paginicial.html";
 }
 
 async function listaUsuarios(){

@@ -12,12 +12,8 @@ document.getElementById("formLogin").addEventListener("submit", function(event) 
     .then(response => {
     if (response.ok) {
         response.json().then(usuario => {
-
-            localStorage.setItem(
-                "usuariologado",
-                JSON.stringify(usuario)
-            );
-
+            // Salva apenas o papel do usuário para as verificações de permissão
+            sessionStorage.setItem("role", usuario.role);
             console.log("Usuário logado:", usuario);
 
 
